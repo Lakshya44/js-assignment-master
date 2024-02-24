@@ -11,7 +11,7 @@ const getAllSportsToursAndMatches = async () => {
         if (!res[sportName][tourName]) {
             res[sportName][tourName] = [];
         }
-        res[sportName][tourName].push([`match name: ${matchName}`, `match id: ${matchId}`, `match start time: ${matchStartTime}`, `match format: ${matchFormat}`]);
+        res[sportName][tourName].push({match_name: matchName, match_id: matchId, match_start_time: matchStartTime, match_format: matchFormat});
     });
     return res;
 }
